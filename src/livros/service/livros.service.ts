@@ -11,7 +11,10 @@ export class LivrosService {
   ) {}
 
   buscarLivros() {
-    return this.livrosModel.find().exec();
+    return this.livrosModel.find({}, {
+      _id: true,
+      nome: true,
+    }).exec();
   }
 
   async buscar(_id: string) {
