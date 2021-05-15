@@ -25,7 +25,7 @@ export class LivrosController {
     return this.livrosService.buscar(id);
   }
 
-  @Delete()
+  @Delete(':id')
   deletarLivro(@Param('id') id: string) {
     return this.livrosService.deletar(id);
   }
